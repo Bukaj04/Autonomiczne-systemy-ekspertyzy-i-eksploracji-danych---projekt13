@@ -11,12 +11,14 @@
 5. Present the results in a table and on the hourly heatmap
 
 # File structure
-```markdown
-
-* **aws-logs-003693136002-us-east-1** (Główny bucket S3)
-    * **raw/** - Warstwa surowa
-        * `raw_data.json` - Oryginalne dane z API
-    * **validated/** - Warstwa zweryfikowana
-        * `validated_data.csv` - Dane po walidacji (Notatnik 1)
-    * **final/** - Warstwa analityczna
-        * `final_risk_analytics.csv` - Wyniki końcowe (Notatnik 2)
+```text
+aws-logs-003693136002-us-east-1/  #Bucket S3
+│
+├── raw/
+│   └── raw_data.json               # Surowe dane z REST API
+│
+├── validated/
+│   └── validated_data.csv          # Dane oczyszczone i sprawdzone
+│
+└── final/
+    └── final_data.csv              # Końcowe wyniki
