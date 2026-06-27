@@ -9,3 +9,14 @@
 3. Fetch the validated_data.csv, aggregate it by hours and stations, calculate the important parameters (mean, max wind speed)
 4. Analyze the data and return a proper risk score for each activity, station and hour
 5. Present the results in a table and on the hourly heatmap
+
+# File structure
+```markdown
+
+* **aws-logs-003693136002-us-east-1** (Główny bucket S3)
+    * **raw/** - Warstwa surowa
+        * `raw_data.json` - Oryginalne dane z API
+    * **validated/** - Warstwa zweryfikowana
+        * `validated_data.csv` - Dane po walidacji (Notatnik 1)
+    * **final/** - Warstwa analityczna
+        * `final_risk_analytics.csv` - Wyniki końcowe (Notatnik 2)
